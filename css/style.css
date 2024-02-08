@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* outline: 1px solid red; */
 }
 
 
@@ -27,6 +28,22 @@
     font-family: "Titillium Web", sans-serif;
     font-weight: 700;
     font-style: normal;
+}
+
+:root {
+    --swiper-theme-color: #000000;
+}
+
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    background: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -510,7 +527,6 @@
     border: 1px solid rgb(255, 255, 255);
     border-collapse: collapse;
     background-color: #f2f2f2;
-    border-radius: 20px;
 }
 
             @media (min-width: 500px) {
@@ -575,28 +591,6 @@
             
 
 /*--------- Swiper styles --------*/
-:root {
-    --swiper-theme-color: #000000;
-}
-
-            /* @media (max-width: 500px) {
-                :root {
-                    --swiper-theme-color: #ffffff;
-                }
-            } */
-
-html,
-body {
-    position: relative;
-    height: 100%;
-}
-
-body {
-    background: rgb(255, 255, 255);
-    margin: 0;
-    padding: 0;
-}
-
 #gallery {
     width: 95vw;
     margin: 0 auto;
@@ -633,56 +627,34 @@ body {
 
 .swiper {
     width: 100%;
-    /* height: 90vh; */
 
-    /* added */
     padding-top: 50px;
     padding-bottom: 50px;
 }
 
 .swiper-slide {
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-
-    overflow: hidden; */
     background-position: center;
     background-size: cover;
-    width: 60%;
+    width: 50%;
     height: 75%;
 }
-
-            /* @media (max-width: 800px) {
-                .swiper-slide {
-                    background-color: #f2f2f2;
-                    border-radius: 20px;
-                }
-            } */
 
 .swiper-slide img {
     display: block;
 
     width: 100%;
-        
-    /* object-position: center;
-    object-fit: cover; */
 }
 
 .project-zot img {
     padding-top: 70px;
 }
 
-@media (max-width: 500px) {
-    .project-zot img {
-        padding-top: 10px;
-    }
-}
-
-            /* @media (min-width: 800px) {
-                .swiper-slide img {
-                    border-radius: 20px;
+            @media (max-width: 500px) {
+                .project-zot img {
+                    padding-top: 10px;
                 }
-            } */
+            }
+
 
 .swiper-button-next,
 .swiper-button-prev {
@@ -700,27 +672,6 @@ body {
                 }
             }
 
-            /* @media (max-width: 930px) {
-                .swiper-pagination {
-                    display: none;
-                }
-            } */
-
-/* .swiper-pagination-bullet {
-    width: 20px;
-    height: 20px;
-    text-align: center;
-    line-height: 20px;
-    font-size: 12px;
-    color: #000;
-    opacity: 1;
-    background: rgba(0, 0, 0, 0.2);
-  }
-
-  .swiper-pagination-bullet-active {
-    color: black;
-    background-color: #e1e1e1;
-  } */
 
 
 

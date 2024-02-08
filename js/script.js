@@ -19,3 +19,35 @@ menuIcon.addEventListener(`click`, () => {
         menuList.style.display = "none"
     }
 })
+
+
+
+
+// ----------DARK vs LIGHT MODE ------------
+
+//vyskakovacie okno - dark/light mode?
+const mode = prompt("Dark / Light mode?");
+
+//vytiahnutie elementov z html
+const body = document.querySelector("body");
+const aboutUs = document.querySelector("#about-us");
+const ourWork = document.querySelector("#our-work");
+const ourWorkTable = document.querySelector("#our-work table");
+const footer = document.querySelector("#footer");
+const contacts = document.querySelector("#contacts");
+
+//IF ELSE
+if (mode === "dark" || mode === "dark mode") {
+    body.style.backgroundColor = "black";
+    body.style.color = "white";
+    aboutUs.style.color = "white";
+    ourWork.style.color = "white";
+    ourWorkTable.style.color = "black";
+    footer.style.backgroundColor = "grey";
+    contacts.style.border = "1px solid white";
+} else if (mode === "light" || mode === "light mode") {
+    body.style.backgroundColor = "white";
+    body.style.color = "black";
+} else {
+    prompt("Zadajte prosím znova, či chcete tmavý alebo svetlý režim webu zadaním buď `dark` alebo `light`");
+}
