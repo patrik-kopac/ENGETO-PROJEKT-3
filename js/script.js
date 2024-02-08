@@ -28,16 +28,41 @@ menuIcon.addEventListener(`click`, () => {
 //vyskakovacie okno - dark/light mode?
 // const mode = prompt("Dark / Light mode?");
 
-//vytiahnutie elementov z html
-// const body = document.querySelector("body");
-// const aboutUs = document.querySelector("#about-us");
-// const ourWork = document.querySelector("#our-work");
-// const ourWorkTable = document.querySelector("#our-work table");
-// const footer = document.querySelector("#footer");
-// const contacts = document.querySelector("#contacts");
 
+//vytiahnutie elementov z html
+const body = document.querySelector("body");
+const aboutUs = document.querySelector("#about-us");
+const ourWork = document.querySelector("#our-work");
+const ourWorkTable = document.querySelector("#our-work table");
+const footer = document.querySelector("#footer");
+const contacts = document.querySelector("#contacts");
+const darkMode = document.querySelector("#dark-mode");
+const lightMode = document.querySelector("#light-mode");
+
+darkMode.addEventListener(`click`, () => {
+    body.style.backgroundColor = "black";
+    body.style.color = "white";
+    aboutUs.style.color = "white";
+    ourWork.style.color = "white";
+    ourWorkTable.style.color = "black";
+    footer.style.backgroundColor = "grey";
+    contacts.style.border = "1px solid white";
+    darkMode.style.display = "none";
+    lightMode.style.display = "block";
+ })
+
+ lightMode.addEventListener(`click`, () => {
+    body.style.backgroundColor = "white";
+    body.style.color = "black";
+    aboutUs.style.color = "black";
+    ourWork.style.color = "black";
+    footer.style.backgroundColor = "black";
+    contacts.style.border = "1px solid black";
+    lightMode.style.display = "none";
+    darkMode.style.display = "block";
+ })
 //IF ELSE
-// if (mode === "dark" || mode === "dark mode") {
+// if (darkMode.style === "block") {
 //     body.style.backgroundColor = "black";
 //     body.style.color = "white";
 //     aboutUs.style.color = "white";
@@ -45,7 +70,7 @@ menuIcon.addEventListener(`click`, () => {
 //     ourWorkTable.style.color = "black";
 //     footer.style.backgroundColor = "grey";
 //     contacts.style.border = "1px solid white";
-// } else if (mode === "light" || mode === "light mode") {
+// } else if (lightMode === "light" || mode === "light mode") {
 //     body.style.backgroundColor = "white";
 //     body.style.color = "black";
 // } else {

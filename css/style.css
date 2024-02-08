@@ -766,22 +766,66 @@ body {
     border: 1px solid white; 
     border-radius: 20px;
     outline: none; 
-    background-color: rgb(0, 0, 0); 
+    background-color: rgb(21, 134, 13); 
     color: rgb(255, 255, 255); 
     cursor: pointer; 
     padding: 15px; 
     font-size: 18px;
-    text-decoration: none;
   }
   
-  #myBtn:hover {
-    background-color: rgb(56, 56, 56);
+#myBtn:hover {
+    background-color: rgb(28, 186, 14);
   }
 
 
 
 
+  /* --------------dark/light mode----------- */
+#dark-mode,
+#light-mode {
+    position: fixed; 
+    bottom: 15%; 
+    left: 2%; 
+
+    z-index: 999999;
+    
+    border-radius: 20px;
+    outline: none; 
+    padding: 15px; 
+    
+    cursor: pointer; 
+    
+    font-size: 18px;
+  }
   
+  
+#dark-mode {
+    display: block;
+    
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+}
+    
+#dark-mode:hover {
+    background-color: rgb(47, 47, 47);
+}
+
+#light-mode {
+    display: none;
+
+    border: 1px solid rgb(0, 0, 0); 
+    background-color: rgb(255, 254, 254); 
+    color: rgb(0, 0, 0); 
+}
+
+#light-mode:hover {
+    background-color: rgb(218, 217, 217);
+  }
+
+
+
+
 
 /* ---------------FOOTER---------------- */
 #footer {
