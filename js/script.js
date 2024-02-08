@@ -25,9 +25,6 @@ menuIcon.addEventListener(`click`, () => {
 
 // ----------DARK vs LIGHT MODE ------------
 
-//vyskakovacie okno - dark/light mode?
-// const mode = prompt("Dark / Light mode?");
-
 
 //vytiahnutie elementov z html
 const body = document.querySelector("body");
@@ -39,6 +36,8 @@ const contacts = document.querySelector("#contacts");
 const darkMode = document.querySelector("#dark-mode");
 const lightMode = document.querySelector("#light-mode");
 
+
+// funkcia - defaultne je light mode a dark-mode button, po prekliku sa web prehodí do tmava a dark-mode button je vystriedaný light-mode buttonom
 darkMode.addEventListener(`click`, () => {
     body.style.backgroundColor = "black";
     body.style.color = "white";
@@ -61,21 +60,8 @@ darkMode.addEventListener(`click`, () => {
     lightMode.style.display = "none";
     darkMode.style.display = "block";
  })
-//IF ELSE
-// if (darkMode.style === "block") {
-//     body.style.backgroundColor = "black";
-//     body.style.color = "white";
-//     aboutUs.style.color = "white";
-//     ourWork.style.color = "white";
-//     ourWorkTable.style.color = "black";
-//     footer.style.backgroundColor = "grey";
-//     contacts.style.border = "1px solid white";
-// } else if (lightMode === "light" || mode === "light mode") {
-//     body.style.backgroundColor = "white";
-//     body.style.color = "black";
-// } else {
-//     prompt("Zadajte prosím znova, či chcete tmavý alebo svetlý režim webu zadaním buď `dark` alebo `light`");
-// }
+
+
 
 
 // -------- SCROLL UP BUTTON -----------
