@@ -84,3 +84,32 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
+
+// ------------MOUSEENTER + MOUSELEAVE ----------
+
+//vytiahnutie elementov z html
+const valueProject = document.querySelector(`.value-project`);
+const valueRealisation = document.querySelector(`.value-realisation`);
+const valueConnection = document.querySelector(`.value-connection`);
+
+// funkcia mouseenter najetí myškou na obrázok
+const mouseEnter = (img) => {
+    img.addEventListener(`mouseenter`, () => {
+        img.style.transform = "scale(1.5)";
+        img.style.transition = "3s";
+    })
+}
+mouseEnter(valueProject);
+mouseEnter(valueRealisation);
+mouseEnter(valueConnection);
+
+// funkcia mouseleave odchod z obrázku
+const mouseLeave = (img) => {
+    img.addEventListener(`mouseleave`, () => {
+        img.style.transform = "scale(1.0)";
+        img.style.transition = "3s";
+    })
+}
+mouseLeave(valueProject);
+mouseLeave(valueRealisation);
+mouseLeave(valueConnection);
