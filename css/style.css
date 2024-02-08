@@ -756,6 +756,30 @@ body {
 
 
 
+/* --------------scrollup-btn----------- */
+#myBtn {
+    display: none; 
+    position: fixed; 
+    bottom: 15%; 
+    right: 2%; 
+    z-index: 999999;
+    border: 1px solid white; 
+    border-radius: 20px;
+    outline: none; 
+    background-color: rgb(0, 0, 0); 
+    color: rgb(255, 255, 255); 
+    cursor: pointer; 
+    padding: 15px; 
+    font-size: 18px;
+    text-decoration: none;
+  }
+  
+  #myBtn:hover {
+    background-color: rgb(56, 56, 56);
+  }
+
+
+
 /* ---------------FOOTER---------------- */
 #footer {
     background-color: #000000;
