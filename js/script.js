@@ -1,4 +1,4 @@
-// ------HAMBURGER MENU--------
+// ---------- HAMBURGER MENU -----------
 
 // tvorba premenných
 const menuIcon = document.querySelector(`.menu-icon`)
@@ -47,7 +47,7 @@ function topFunction() {
 
 
 
-// ------------MOUSEENTER + MOUSELEAVE ----------
+// ------------ VALUES - MOUSEENTER/MOUSELEAVE/SCROLL ----------
 
 //vytiahnutie elementov z html
 const valueProject = document.querySelector(`.value-project`);
@@ -59,7 +59,7 @@ const mouseEnter = (img) => {
     img.addEventListener(`mouseenter`, () => {
         img.style.transform = "scale(2.5)";
         img.style.transition = "15s";
-        img.style.zIndex = "999999";
+        img.style.zIndex = 99;
     })
 }
 mouseEnter(valueProject);
@@ -71,8 +71,9 @@ const mouseLeave = (img) => {
     img.addEventListener(`mouseleave`, () => {
         img.style.transform = "scale(1.0)";
         img.style.transition = "1s";
-        img.style.zIndex = "1";
-        valueRealisation.style.zIndex = "999";
+        img.style.zIndex = 1;
+        // valueProject.style.zIndex = 1;
+        valueRealisation.style.zIndex = 2;
     })
 }
 mouseLeave(valueProject);
@@ -82,8 +83,33 @@ mouseLeave(valueConnection);
 
 
 
+// -------------- SHOW SECTIONS AFTER SCROLL-----------
 
-// ----------DARK vs LIGHT MODE + ROTATE------------
+// vytiahnutie elementov z html
+const values = document.querySelector("#values");
+
+// funkcia, kedy sa až po nascrollovaní nižšie zobrazí celá sekcia, nech to lepšie vypadá
+const showSection = (section, time) => {
+    window.addEventListener("scroll", () => {
+    if (window.scrollY >= time) {
+         section.style.visibility = "visible";
+         section.style.marginTop = "0px";
+    } else {
+        section.style.visibility = "hidden";
+    }
+ })
+}
+
+showSection(values, 1);
+
+
+
+
+
+
+
+
+// ---------- DARK vs LIGHT MODE + ROTATE ------------
 
 
 //vytiahnutie elementov z html
@@ -92,7 +118,6 @@ const aboutUs = document.querySelector("#about-us");
 const ourWork = document.querySelector("#our-work");
 const ourWorkTable = document.querySelector("#our-work table");
 const footer = document.querySelector("#footer");
-const contacts = document.querySelector("#contacts");
 const darkMode = document.querySelector("#dark-mode");
 const lightMode = document.querySelector("#light-mode");
 
