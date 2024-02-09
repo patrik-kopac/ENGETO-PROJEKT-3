@@ -23,7 +23,67 @@ menuIcon.addEventListener(`click`, () => {
 
 
 
-// ----------DARK vs LIGHT MODE ------------
+// -------- SCROLL UP BUTTON -----------
+
+//vytiahnutie elementov z html
+const myBtn = document.querySelector("#myBtn")
+
+// funkcia - po odscrollovaní 1200px zhora webu sa užívateľovi zobrazí button
+window.addEventListener("scroll", () => {
+    if (window.scrollY >= 1200) {
+         myBtn.style.display = "block";
+    } else {
+         myBtn.style.display = "none";
+    }
+ })
+
+// funkcia - keď užívateľ klikne na button, automaticky ho scrollne na vrch webu
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+
+
+
+
+// ------------MOUSEENTER + MOUSELEAVE ----------
+
+//vytiahnutie elementov z html
+const valueProject = document.querySelector(`.value-project`);
+const valueRealisation = document.querySelector(`.value-realisation`);
+const valueConnection = document.querySelector(`.value-connection`);
+
+// funkcia mouseenter najetí myškou na obrázok
+const mouseEnter = (img) => {
+    img.addEventListener(`mouseenter`, () => {
+        img.style.transform = "scale(2.5)";
+        img.style.transition = "15s";
+        img.style.zIndex = "999999";
+    })
+}
+mouseEnter(valueProject);
+mouseEnter(valueRealisation);
+mouseEnter(valueConnection);
+
+// funkcia mouseleave odchod z obrázku
+const mouseLeave = (img) => {
+    img.addEventListener(`mouseleave`, () => {
+        img.style.transform = "scale(1.0)";
+        img.style.transition = "1s";
+        img.style.zIndex = "1";
+        valueRealisation.style.zIndex = "999";
+    })
+}
+mouseLeave(valueProject);
+mouseLeave(valueRealisation);
+mouseLeave(valueConnection);
+
+
+
+
+
+// ----------DARK vs LIGHT MODE + ROTATE------------
 
 
 //vytiahnutie elementov z html
@@ -61,55 +121,7 @@ darkMode.addEventListener(`click`, () => {
     darkMode.style.display = "block";
  })
 
-
-
-
-// -------- SCROLL UP BUTTON -----------
-
-//vytiahnutie elementov z html
-const myBtn = document.querySelector("#myBtn")
-
-// funkcia - po odscrollovaní 1200px zhora webu sa užívateľovi zobrazí button
-window.addEventListener(`scroll`, () => {
-    if (window.scrollY >= 1200) {
-         myBtn.style.display = "block";
-    } else {
-         myBtn.style.display = "none";
-    }
- })
-
-// funkcia - keď užívateľ klikne na button, automaticky ho scrollne na vrch webu
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-
-
-// ------------MOUSEENTER + MOUSELEAVE ----------
-
-//vytiahnutie elementov z html
-const valueProject = document.querySelector(`.value-project`);
-const valueRealisation = document.querySelector(`.value-realisation`);
-const valueConnection = document.querySelector(`.value-connection`);
-
-// funkcia mouseenter najetí myškou na obrázok
-const mouseEnter = (img) => {
-    img.addEventListener(`mouseenter`, () => {
-        img.style.transform = "scale(1.5)";
-        img.style.transition = "3s";
-    })
-}
-mouseEnter(valueProject);
-mouseEnter(valueRealisation);
-mouseEnter(valueConnection);
-
-// funkcia mouseleave odchod z obrázku
-const mouseLeave = (img) => {
-    img.addEventListener(`mouseleave`, () => {
-        img.style.transform = "scale(1.0)";
-        img.style.transition = "3s";
-    })
-}
-mouseLeave(valueProject);
-mouseLeave(valueRealisation);
-mouseLeave(valueConnection);
+ // Rotácia nekonečná
+ $('#dark-mode' || '#light-mode').on('mouseout', function () {
+    $('#dark-mode').css('animation-play-state','running');
+});

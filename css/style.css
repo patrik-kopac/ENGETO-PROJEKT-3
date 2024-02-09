@@ -411,12 +411,17 @@ body {
 
     width: 100%;
     height: 100%;
+
+    position: relative;
 }
 
 .value-project,
 .value-realisation,
 .value-connection {
-    flex-basis: calc(100% / 3 - 5vw);
+    width: calc(100% / 2.7);
+    height: 90%;
+
+    position: absolute;
 }
 
 .value-project-img,
@@ -436,14 +441,30 @@ body {
     position: relative;
 }
 
+.value-project {
+    left: 0;
+    top: 0;
+}
+
 .value-project-img {
     background-image: url("/assets/images/project.jpg");
     /* background-color: rgb(0 46 255 / 40%); */
 }
 
+.value-realisation {
+    left: 32%;
+    top: 10%;
+    z-index: 999;
+}
+
 .value-realisation-img {
     background-image: url("/assets/images/realisation2.jpg");
     /* background-color: rgb(255 0 0 / 40%); */
+}
+
+.value-connection {
+    left: 63%;
+    top: 0;
 }
 
 .value-connection-img {
@@ -942,6 +963,7 @@ body {
 
 
 
+  
   /* --------------dark/light mode----------- */
 #dark-mode,
 #light-mode {
@@ -951,7 +973,7 @@ body {
 
     z-index: 999999;
     
-    border-radius: 20px;
+    border-radius: 50%;
     outline: none; 
     padding: 10px; 
     width: 60px;
@@ -966,9 +988,8 @@ body {
         @media (min-width: 700px) {
               #dark-mode,
               #light-mode {
-                  padding: 15px; 
-                  font-size: 18px;
-                  width: inherit;
+                padding: 14px 5px;
+                font-size: 15px;
               }
           }
   
@@ -996,6 +1017,16 @@ body {
 #light-mode:hover {
     background-color: rgb(218, 217, 217);
   }
+
+.rotate {
+    animation:spin 7s linear infinite;
+}
+
+            @keyframes spin {
+                100% {
+                    transform:rotate(360deg);
+                }
+            }
 
 
 
