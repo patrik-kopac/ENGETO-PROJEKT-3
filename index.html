@@ -449,10 +449,69 @@
             
         </section>
 
+        <!------------contact-form------------>
+        <section id="form">
+
+            <div class="form-container">
+
+                <h2>Přihlašte se do newsletteru!</h2>
+    
+                <p class="notification-name">
+                    Vyplňte prosím jméno a příjmení
+                </p>
+    
+                <p class="notification-mail">
+                    Vyplňte prosím e-mail
+                </p>
+    
+                <p class="notification-password">
+                    Vyplňte prosím heslo
+                </p>
+    
+                <p class="notification-password-confirmation">
+                    Potvrďte prosím heslo
+                </p>
+    
+                <p class="notification-rules">
+                    Potvrďte prosím souhlas s pravidly registrace
+                </p>
+    
+                <form method="post" enctype="text/plain">
+                    
+                    <input type="text" class="form-name" name="name" placeholder="Jméno a příjmení" pattern="^.* .*$" minlength="4" title="Zadejte jméno a příjmení oddělené mezerou" maxlength="30" required><br>
+    
+                    <input type="email" class="form-mail" name="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="E-mail" title="Zadejte e-mailovou adresu ve formátu x@y.z" maxlength="30" required><br>
+    
+                    <input type="tel" class="form-phone" name="phone" placeholder="Telefon (777 777 777)" minlength="9" maxlength="11" pattern="[0-9]{3} [0-9]{3} [0-9]{3}" title="Zadejte české telefonní číslo ve formátu 777 777 777"><br>
+    
+                    <input type="password" class="form-password" name="password" placeholder="Heslo" minlength="8" maxlength="30" required title="Heslo musí obsahovať minimálně 8 znaků"><br>
+    
+                    <input type="password" class="form-password-confirmation" name="password-confirmation" placeholder="Potvrzení hesla" minlength="8" maxlength="30" required title="Hesla se musí shodovat"><br>
+                    
+                    <div class="form-rules">
+    
+                        <input type="checkbox" checked name="rules" required value="1" />
+                        <label for="rules">Souhlasím s pravidly registrace.</label><br>
+    
+                    </div>
+    
+                    <div class="form-submit">
+    
+                        <input type="submit"  name="send" value="Odeslat">
+
+                    </div>
+    
+                </form>
+
+            </div>
+    
+        </section>
+            
+
 
         <!------------scrollup-btn------------>
         <button onclick="topFunction()" id="myBtn" title="Po kliknutí se vrátíte zpět nahoru stránky.">
-           &#8593; Zpět nahoru &#8593;
+           <span>&#8593;</span> Zpět nahoru <span>&#8593;</span>
         </button>
 
 

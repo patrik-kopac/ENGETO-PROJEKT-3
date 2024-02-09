@@ -105,6 +105,53 @@ showSection(values, 1);
 
 
 
+// ------------FORM --------------
+
+// vytiahnutie elementov z html
+const form = document.querySelector("form");
+const formName = document.querySelector(".form-name");
+const formMail = document.querySelector(".form-mail");
+const formPhone = document.querySelector(".form-phone");
+const formPassword = document.querySelector(".form-password");
+const formPasswordConfirmation = document.querySelector(".form-password-confirmation");
+const formRules = document.querySelector(".form-rules");
+const noName = document.querySelector(".notification-name")
+const noMail = document.querySelector(".notification-mail")
+const noPassword = document.querySelector(".notification-password")
+const noPasswordConfirmation = document.querySelector(".notification-password-confirmation")
+const noRules = document.querySelector(".notification-rules")
+
+
+// funkcia potvrdenie odoslania formuláru + vyčistenie inputov + zábrana znovunčítania stránky + keď niečo nevyplnia tak zobrazenie upozornení
+form.addEventListener("submit", (event) => {
+    
+    // pri nevyplnení povinnej položky zobrazenie paragrafov
+    const notFill = (input, output) => {
+        if (input.value === "") {
+            output.style.display = "block"
+        }
+    }
+
+    notFill(formName,noName);
+    notFill(formMail,noMail);
+    notFill(formPassword,noPassword);
+    notFill(formPasswordConfirmation,noPasswordConfirmation);
+    notFill(formRules,noRules);
+
+    // zabránenie znovunačítaniu stránky
+    event.preventDefault()
+
+    // potvrdenie odoslania formulára
+    confirm("Úspěšně odesláno, děkujeme!");
+
+    //vyčistenie inputov
+    formName.value = "";
+    formMail.value = "";
+    formPassword.value = "";
+    formPasswordConfirmation.value = "";
+    formPhone.value = "";  
+})
+
 
 
 
@@ -120,7 +167,8 @@ const ourWorkTable = document.querySelector("#our-work table");
 const footer = document.querySelector("#footer");
 const darkMode = document.querySelector("#dark-mode");
 const lightMode = document.querySelector("#light-mode");
-
+const formHeading = document.querySelector("#form h2")
+const swiperPaginatorBullet = document.querySelector(".swiper-pagination-bullet-active");
 
 // funkcia - defaultne je light mode a dark-mode button, po prekliku sa web prehodí do tmava a dark-mode button je vystriedaný light-mode buttonom
 darkMode.addEventListener(`click`, () => {
@@ -133,6 +181,9 @@ darkMode.addEventListener(`click`, () => {
     contacts.style.border = "1px solid white";
     darkMode.style.display = "none";
     lightMode.style.display = "block";
+    form.style.color = "black";
+    formHeading.style.color = "black";
+    swiperPaginatorBulletActive.style.backgroundColor = "white";
  })
 
  lightMode.addEventListener(`click`, () => {
@@ -144,6 +195,7 @@ darkMode.addEventListener(`click`, () => {
     contacts.style.border = "1px solid black";
     lightMode.style.display = "none";
     darkMode.style.display = "block";
+    swiperPaginatorBulletActive.style.backgroundColor = "black";
  })
 
  // Rotácia nekonečná
