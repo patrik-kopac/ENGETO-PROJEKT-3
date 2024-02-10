@@ -109,34 +109,25 @@ showSection(values, 1);
 
 // vytiahnutie elementov z html
 const form = document.querySelector("form");
-const formName = document.querySelector(".form-name");
-const formMail = document.querySelector(".form-mail");
-const formPhone = document.querySelector(".form-phone");
-const formPassword = document.querySelector(".form-password");
-const formPasswordConfirmation = document.querySelector(".form-password-confirmation");
-const formRules = document.querySelector(".form-rules");
-const noName = document.querySelector(".notification-name")
-const noMail = document.querySelector(".notification-mail")
-const noPassword = document.querySelector(".notification-password")
-const noPasswordConfirmation = document.querySelector(".notification-password-confirmation")
-const noRules = document.querySelector(".notification-rules")
+let formName = document.querySelector(".form-name input");
+let formMail = document.querySelector(".form-mail input");
+let formPhone = document.querySelector(".form-phone input");
+let formPassword = document.querySelector(".form-password input");
+let formPasswordConfirmation = document.querySelector(".form-password-confirmation input");
+const badPasswords = document.querySelector(".bad-passwords")
+const formSubmit = document.querySelector(".form-submit input")
+const formSubmitReplacement = document.querySelector(".form-submit-replacement")
 
+// funkcia nezhoda hesiel alebo ich krátke znenie = nefunkčný submit button
+if (formPassword.value != "" && formPasswordConfirmation.value != "" && formPassword.length >= 8 && formPasswordConfirmation.length >= 8 && formPassword.value == formPasswordConfirmation.value) {
+        formSubmit.style.display = "block";
+        formSubmitReplacement.style.display = "none";
+} 
 
-// funkcia potvrdenie odoslania formuláru + vyčistenie inputov + zábrana znovunčítania stránky + keď niečo nevyplnia tak zobrazenie upozornení
+// badPasswords.style.display = "block";
+
+// funkcia potvrdenie odoslania formuláru + vyčistenie inputov + zábrana znovunčítania stránky
 form.addEventListener("submit", (event) => {
-    
-    // pri nevyplnení povinnej položky zobrazenie paragrafov
-    const notFill = (input, output) => {
-        if (input.value === "") {
-            output.style.display = "block"
-        }
-    }
-
-    notFill(formName,noName);
-    notFill(formMail,noMail);
-    notFill(formPassword,noPassword);
-    notFill(formPasswordConfirmation,noPasswordConfirmation);
-    notFill(formRules,noRules);
 
     // zabránenie znovunačítaniu stránky
     event.preventDefault()

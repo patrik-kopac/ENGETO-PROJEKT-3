@@ -959,16 +959,33 @@ body {
     padding-top: 5vh;
 }
 
-.form-name,
-.form-mail,
-.form-phone,
-.form-password,
-.form-password-confirmation {
-    width: 100%;
+.form-name input,
+.form-mail input,
+.form-phone input,
+.form-password input,
+.form-password-confirmation input {
+    width: 90%;
     height: 5vh;
     border-radius: 20px;
     padding-left: 3%;
-    margin-bottom: 3%;
+    margin: 0 auto 3% auto;
+
+    cursor: help;
+}
+
+.form-name::before,
+.form-mail::before,
+.form-phone::before,
+.form-password::before,
+.form-password-confirmation::before,
+.form-rules::before {
+    content: "*";
+    color: red;
+    padding: 1%;
+}
+
+.form-phone::before {
+    visibility: hidden;
 }
 
 .form-rules {
@@ -984,15 +1001,17 @@ body {
                 }
             }
 
-.notification-name,
-.notification-mail,
-.notification-password,
-.notification-password-confirmation,
-.notification-rules {
+.bad-passwords {
     display: none;
 
-    color: red;
+    color: white;
     font-weight: 700;
+    text-align: center;
+    margin: 0 auto 3% auto;
+    padding: 2%;
+    background-color: red;
+    border-radius: 20px;
+    width: fit-content;
 }
 
 #form .form-submit {
@@ -1019,6 +1038,8 @@ body {
     text-align: center;
     background-color: #000000;
     color: #ffffff;
+
+    display: none;
 }
 
 .form-submit input:hover {
@@ -1028,6 +1049,41 @@ body {
 
     background-color: #4f4c4c;
 }
+
+.form-submit-replacement {
+    width: 100%;
+    padding: 5% 0;
+    margin-bottom: 5vh;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    text-align: center;
+    background-color: #000000;
+    color: #ffffff;
+
+    display: block;
+}
+
+#form .red-star {
+    color: red;
+    font-size: 0.6rem;
+    text-align: center;
+    padding-bottom: 3%;
+}
+
+            @media (min-width: 500px) {
+                #form .red-star {
+                    font-size: 0.8rem;
+                }
+            }
+
+            @media (min-width: 700px) {
+                #form .red-star {
+                    font-size: 1rem;
+                }
+            }
 
 
 

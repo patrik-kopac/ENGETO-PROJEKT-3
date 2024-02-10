@@ -226,7 +226,6 @@
 
         </section>
 
-        <!------------------ SWIPPER -------------------->
         <!------------- Gallery / Swiper ------------->
         <section id="gallery">
 
@@ -456,37 +455,41 @@
 
                 <h2>Přihlašte se do newsletteru!</h2>
     
-                <p class="notification-name">
-                    Vyplňte prosím jméno a příjmení
-                </p>
-    
-                <p class="notification-mail">
-                    Vyplňte prosím e-mail
-                </p>
-    
-                <p class="notification-password">
-                    Vyplňte prosím heslo
-                </p>
-    
-                <p class="notification-password-confirmation">
-                    Potvrďte prosím heslo
-                </p>
-    
-                <p class="notification-rules">
-                    Potvrďte prosím souhlas s pravidly registrace
+                <p class="bad-passwords">
+                    Hesla se neshodují!
                 </p>
     
                 <form method="post" enctype="text/plain">
                     
-                    <input type="text" class="form-name" name="name" placeholder="Jméno a příjmení" pattern="^.* .*$" minlength="4" title="Zadejte jméno a příjmení oddělené mezerou" maxlength="30" required><br>
+                    <div class="form-name">
+                        
+                        <input type="text"  name="name" placeholder="Jméno a příjmení" pattern="^.* .*$" minlength="4" title="Zadejte jméno a příjmení oddělené mezerou" maxlength="30" required><br>
+
+                    </div>
     
-                    <input type="email" class="form-mail" name="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="E-mail" title="Zadejte e-mailovou adresu ve formátu x@y.z" maxlength="30" required><br>
+                    <div class="form-mail">
+
+                        <input type="email" name="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="E-mail" title="Zadejte e-mailovou adresu ve formátu x@y.z" maxlength="30" required><br>
+
+                    </div>
     
-                    <input type="tel" class="form-phone" name="phone" placeholder="Telefon (777 777 777)" minlength="9" maxlength="11" pattern="[0-9]{3} [0-9]{3} [0-9]{3}" title="Zadejte české telefonní číslo ve formátu 777 777 777"><br>
+                    <div class="form-phone" >
+
+                        <input type="tel" name="phone" placeholder="Telefon" title="Zadejte telefonní číslo "><br>
+
+                    </div>
     
-                    <input type="password" class="form-password" name="password" placeholder="Heslo" minlength="8" maxlength="30" required title="Heslo musí obsahovať minimálně 8 znaků"><br>
+                    <div class="form-password">
+
+                        <input type="password"  name="password" placeholder="Heslo" minlength="8" maxlength="30" required title="Heslo musí obsahovať minimálně 8 znaků"><br>
+
+                    </div>
     
-                    <input type="password" class="form-password-confirmation" name="password-confirmation" placeholder="Potvrzení hesla" minlength="8" maxlength="30" required title="Hesla se musí shodovat"><br>
+                    <div class="form-password-confirmation">
+
+                        <input type="password"  name="password-confirmation" placeholder="Potvrzení hesla" minlength="8" maxlength="30" required title="Hesla se musí shodovat"><br>
+
+                    </div>
                     
                     <div class="form-rules">
     
@@ -499,7 +502,13 @@
     
                         <input type="submit"  name="send" value="Odeslat">
 
+                        <div class="form-submit-replacement" title="Vyplňte všechny položky formuláře správně prosím.">
+                            Odeslat
+                        </div>
+
                     </div>
+
+                    <p class="red-star">Položky označené červenou hvězdičkou jsou povinné.</p>
     
                 </form>
 
