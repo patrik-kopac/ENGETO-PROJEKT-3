@@ -168,7 +168,7 @@ const footer = document.querySelector("#footer");
 const darkMode = document.querySelector("#dark-mode");
 const lightMode = document.querySelector("#light-mode");
 const formHeading = document.querySelector("#form h2")
-const swiperPaginatorBullet = document.querySelector(".swiper-pagination-bullet-active");
+
 
 // funkcia - defaultne je light mode a dark-mode button, po prekliku sa web prehodí do tmava a dark-mode button je vystriedaný light-mode buttonom
 darkMode.addEventListener(`click`, () => {
@@ -183,7 +183,6 @@ darkMode.addEventListener(`click`, () => {
     lightMode.style.display = "block";
     form.style.color = "black";
     formHeading.style.color = "black";
-    swiperPaginatorBulletActive.style.backgroundColor = "white";
  })
 
  lightMode.addEventListener(`click`, () => {
@@ -195,7 +194,6 @@ darkMode.addEventListener(`click`, () => {
     contacts.style.border = "1px solid black";
     lightMode.style.display = "none";
     darkMode.style.display = "block";
-    swiperPaginatorBulletActive.style.backgroundColor = "black";
  })
 
  // Rotácia nekonečná

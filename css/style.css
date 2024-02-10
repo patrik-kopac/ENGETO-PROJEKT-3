@@ -31,14 +31,8 @@
 }
 
 :root {
-    --swiper-theme-color: #959595;
+    --swiper-theme-color: rgb(21, 134, 13);
 }
-
-            /* @media (min-width: 500px) {
-                :root {
-                    --swiper-theme-color: #000000;
-                }
-            } */
 
 html,
 body {
@@ -845,8 +839,9 @@ body {
                 }
             }
 
+.swiper-pagination-bullet,
 .swiper-pagination-bullet-active {
-    background-color: #000;
+    background-color: rgb(21, 134, 13);
 }
 
 
