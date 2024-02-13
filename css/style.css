@@ -303,7 +303,7 @@ body {
 
             @media (max-width: 900px) {
                 #welcome h2 {
-                    font-size: 3rem;
+                    font-size: 2rem;
 
                     padding: 15vh 17vw 0 17vw;
                 }
