@@ -28,7 +28,6 @@
 
 
 
-
 // -------- SCROLL UP BUTTON -----------
 
 //vytiahnutie elementov z html
@@ -59,58 +58,13 @@
 
 
 
-
-// ------------ VALUES - MOUSEENTER/MOUSELEAVE/SCROLL ----------
-
-//vytiahnutie elementov z html
-
-    const valueProject = document.querySelector(`.value-project`);
-    const valueRealisation = document.querySelector(`.value-realisation`);
-    const valueConnection = document.querySelector(`.value-connection`);
-
-// funkcia mouseenter najetí myškou na obrázok
-
-    const mouseEnter = (img) => {
-
-        img.addEventListener(`mouseenter`, () => {
-            img.style.transform = "scale(2.5)";
-            img.style.transition = "15s";
-            img.style.zIndex = 99;
-        })
-
-    }
-
-    mouseEnter(valueProject);
-    mouseEnter(valueRealisation);
-    mouseEnter(valueConnection);
-
-// funkcia mouseleave odchod z obrázku
-
-    const mouseLeave = (img) => {
-
-        img.addEventListener(`mouseleave`, () => {
-            img.style.transform = "scale(1.0)";
-            img.style.transition = "1s";
-            img.style.zIndex = 1;
-            valueRealisation.style.zIndex = 2;
-        })
-
-    }
-
-    mouseLeave(valueProject);
-    mouseLeave(valueRealisation);
-    mouseLeave(valueConnection);
-
-
-
-
 // -------------- SHOW SECTIONS AFTER SCROLL-----------
 
 // vytiahnutie elementov z html
 
     const values = document.querySelector("#values");
 
-// funkcia, kedy sa až po nascrollovaní nižšie zobrazí celá sekcia, nech to lepšie vypadá
+// funkcia, kedy sa až po nascrollovaní nižšie zobrazí celá sekcia, nech to lepšie vypadá (zatiaľ len na sect. values)
 
     const showSection = (section, time) => {
 
@@ -123,7 +77,6 @@
         }
 
     })
-
     }
 
     showSection(values, 1);
@@ -152,8 +105,6 @@
 
 
     function validateForm(event) {
-        
-        event.preventDefault();
 
         const pass = document.getElementById("password").value;
         
