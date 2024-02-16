@@ -151,8 +151,10 @@
     const formSubmitReplacement = document.querySelector(".form-submit-replacement")
 
 
-    function validateForm() {
+    function validateForm(event) {
         
+        event.preventDefault();
+
         const pass = document.getElementById("password").value;
         
         const passConf = document.getElementById("password-confirmation").value;

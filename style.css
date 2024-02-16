@@ -266,7 +266,7 @@ body {
     height: calc(90vh - 70px);
     margin-bottom: 3%;
 
-    background-image: url(/assets/images/vinarstv4.jpg);
+    background-image: url("./assets/images/vinarstv4.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
@@ -455,7 +455,7 @@ body {
 }
 
 .value-project-img {
-    background-image: url("/assets/images/project.jpg");
+    background-image: url("./assets/images/project.jpg");
 }
 
 .value-realisation {
@@ -466,7 +466,7 @@ body {
 }
 
 .value-realisation-img {
-    background-image: url("/assets/images/realisation2.jpg");
+    background-image: url("./assets/images/realisation2.jpg");
 }
 
 .value-connection {
@@ -477,7 +477,7 @@ body {
 }
 
 .value-connection-img {
-    background-image: url("/assets/images/connection.jpg");
+    background-image: url("./assets/images/connection.jpg");
 }
 
 .values-container span {
